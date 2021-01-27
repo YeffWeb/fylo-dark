@@ -33,17 +33,24 @@ a {
   text-decoration: none;
   color: inherit;
 }
-body {
-  background-color: var(--Dark-Blue-main);
-  color: var(--White);
+
+
+
+.container {
   padding: 3rem;
+  width: 95%;
+  margin: 0 auto;
+}
+body {
+  background-color: var(--Dark-Blue);
+  color: var(--White);
   font-size: 1.4rem;
   font-family: "Open Sans", sans-serif;
 }
 @media (min-width: 768px) {
-   body{
+  .container {
     padding: 6rem;
-   }
+  }
 }
 /* Header */
 
@@ -59,6 +66,7 @@ body {
 
 .header_contenido figure img {
   width: 7.5rem;
+
 }
 
 @media (min-width: 768px) {
@@ -76,14 +84,97 @@ body {
   flex: 2 0 50%;
   display: flex;
   justify-content: space-between;
-
+  opacity: .7;
 }
 @media (min-width: 768px) {
-.nav__principal{
-  flex: 1 0 15%;
-  justify-content: space-between ;
+  .nav__principal {
+    flex: 1 0 12%;
+  }
+  .header_contenido figure {
+    flex: 1 0 60%;
+  }
 }
-.header_contenido figure{
-  flex: 1 0 60% ;
+
+/* Intro */
+
+.intro {
+  height: 45rem;
+  background-color: VAR(--Dark-Blue);
+  background-image: url(/images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom center;
 }
+
+@media (min-width: 768px) {
+  .intro {
+    height: 100rem;
+    background-image: url(/images/bg-curvy-desktop.svg);
+  }
+}
+
+.intro__contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro__imagen img {
+  width: 35rem;
+}
+
+@media (min-width: 768px ){
+  .intro__imagen img {
+    width: 60rem;
+  
+  }
+}
+
+.intro__caracteristicas {
+  width: 50ch;
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px){
+  .intro__caracteristicas {
+    width: 70ch;
+    font-size: 1.6rem;
+  }
+}
+
+.intro__caracteristicas .titulo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.intro__caracteristicas .parrafo {
+  width: 37ch;
+  margin: 1rem auto 3rem;
+  opacity: .7;
+}
+@media (min-width: 768px){
+  .intro__caracteristicas .parrafo{
+    width: 55ch;
+  }
+}
+
+.btn:link {
+  display: inline-block;
+  width: 30ch;
+  opacity: 0.8;
+}
+
+.btn__primario {
+  background-image: linear-gradient(to right, var(--Cyan), var(--Blue));
+  border-radius: 3rem;
+  padding: 1rem 5rem;
+}
+
+/* Maain */
+
+.main {
+  background-color: var(--Dark-Blue-main);
+  padding-top: 60rem;
 }
